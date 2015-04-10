@@ -1,0 +1,37 @@
+title = "Ion"
+url = "/ion"
+layout = "ion"
+description = "Ion by TEMPLATED"
+hidden = "0"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h2>This is Ion</h2>
+					<p>A free responsive template by <a href="http://templated.co">TEMPLATED</a></p>
+					<ul class="actions">
+						<li><a href="#content" class="button big special">Sign Up</a></li>
+						<li><a href="#elements" class="button big alt">Learn More</a></li>
+					</ul>
+				</div>
+			</section>
+		<!-- One -->
+			<section id="one" class="wrapper style1">
+                {% partial "blogOne" %}
+			</section>                    
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<header class="major">
+					<h2>Commodo accumsan aliquam</h2>
+					<p>Amet nisi nunc lorem accumsan</p>
+				</header>
+					{% component 'blogPosts' %}
+			</section>

@@ -1,0 +1,28 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/lx/portfolio/models/category/fields.yaml
+
+# Model Class name
+modelClass: Lx\Portfolio\Models\Category
+
+# Default redirect location
+defaultRedirect: lx/portfolio/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: lx/portfolio/categories/update/:id
+    redirectClose: lx/portfolio/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: lx/portfolio/categories
+    redirectClose: lx/portfolio/categories
+

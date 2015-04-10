@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/lx/portfolio/models/post/fields.yaml
+
+# Model Class name
+modelClass: Lx\Portfolio\Models\Post
+
+# Default redirect location
+defaultRedirect: lx/portfolio/posts
+
+# Create page
+create:
+    title: Create Post
+    redirect: lx/portfolio/posts/update/:id
+    redirectClose: lx/portfolio/posts
+
+# Update page
+update:
+    title: Edit Post
+    redirect: lx/portfolio/posts
+    redirectClose: lx/portfolio/posts
+
+# Preview page
+preview:
+    title: Preview Post

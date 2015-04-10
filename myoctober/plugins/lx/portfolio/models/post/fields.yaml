@@ -1,0 +1,101 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: Blog Title
+        span: left
+        placeholder: lx.portfolio::lang.post.title_placeholder
+
+    slug:
+        label: lx.portfolio::lang.post.slug
+        span: right
+        placeholder: lx.portfolio::lang.post.slug_placeholder
+        preset:
+            field: title
+            type: slug
+ 
+    toolbar:
+        type: partial
+        path: post_toolbar
+        cssClass: collapse-visible
+
+# tabs:
+#   fields:
+
+#     excerpt:
+#       tab: Details
+#       label: Excerpt
+#       type: textarea
+#       size: small
+
+secondaryTabs:
+    stretch: true
+    fields:
+        content:
+            tab: lx.portfolio::lang.post.tab_edit
+            stretch: true
+            span: left
+            cssClass: field-slim
+            type: codeeditor
+            language: markdown
+            showGutter: false
+            wrapWords: true
+            fontSize: 13
+            margin: 15
+
+        preview:
+            type: lx\portfolio\FormWidgets\Preview
+            tab: lx.portfolio::lang.post.tab_edit
+            stretch: true
+            span: right
+            cssClass: field-slim
+
+        categories:
+            tab: lx.portfolio::lang.post.tab_categories
+            type: relation
+            commentAbove: lx.portfolio::lang.post.categories_comment
+            placeholder: lx.portfolio::lang.post.categories_placeholder
+
+        published:
+            tab: lx.portfolio::lang.post.tab_manage
+            label: lx.portfolio::lang.post.published
+            span: left
+            type: checkbox
+
+        published_at:
+            tab: lx.portfolio::lang.post.tab_manage
+            label: lx.portfolio::lang.post.published_on
+            span: left
+            cssClass: checkbox-align
+            type: datepicker
+            mode: date
+
+        status:
+          tab: lx.portfolio::lang.post.tab_manage
+          label: Status
+          type: balloon-selector
+        # status:
+        #   tab: Manage
+        #   label: Status
+        #   type: balloon-selector
+        #   options:
+        #     - Draft
+        #     - Review
+        #     - Published
+
+        # featured_images:
+        #     tab: lx.portfolio::lang.post.tab_manage
+        #     label: lx.portfolio::lang.post.featured_images
+        #     type: fileupload
+        #     mode: image
+        #     imageWidth: 200
+        #     imageHeight: 200
+        # excerpt:
+        #     tab: lx.portfolio::lang.post.tab_manage
+        #     label: lx.portfolio::lang.post.excerpt
+        #     type: textarea
+        #     size: small
+

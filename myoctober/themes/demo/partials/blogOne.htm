@@ -1,0 +1,15 @@
+[portfolioPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+==
+<header class="major">
+					<h2>Ipsum feugiat consequat</h2>
+					<p>Tempus adipiscing commodo ut aliquam blandit</p>
+				</header>
+				<div class="container">
+					<div class="row">
+{% component 'portfolioPosts' %}
+					</div>
+				</div>

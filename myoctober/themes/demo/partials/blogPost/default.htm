@@ -1,0 +1,25 @@
+[viewBag]
+==
+{% set post = __SELF__.post %}
+<header class="major">
+	<h2>{{post.title}}</h2>
+</header>
+<div class="container">
+	<section>
+        
+        {% if post.featured_images.count %}
+            <a href="#" class="image fit">
+                {% for image in post.featured_images %}
+                        <img
+                            data-src="{{ image.filename }}"
+                            src="{{ image.path }}"
+                            alt="{{ image.description }}"
+                            style="max-width: 100%" />
+                {% endfor %}
+            </a>
+        {% endif %}
+          <div class="content">{{ post.content_html|raw }}</div>
+      
+
+    </section>
+</div>
